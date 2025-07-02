@@ -58,5 +58,84 @@
 
 body {
   padding-top: 100px;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
 }
 
+/* Centralização e estrutura geral das seções */
+.section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 60px 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Seção Bem-vindo com imagem e texto lado a lado */
+.bemvindo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.bemvindo-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+}
+
+.bemvindo-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.bemvindo-texto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.bemvindo-texto p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.botao-agendar {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #d63384;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-agendar:hover {
+  background-color: #b02a6b;
+}
+
+.bemvindo-imagem {
+  flex: 1;
+  min-width: 300px;
+  text-align: right;
+}
+
+.bemvindo-imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Footer centralizado */
+footer {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  margin-top: 60px;
+}
