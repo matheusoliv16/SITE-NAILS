@@ -1,70 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Let Cordeiro Nails</title>
-  <link rel="stylesheet" href="style/main.css"/>
+  <link rel="stylesheet" href="style/main.css" />
 </head>
+
 <body>
 
   <header class="fixed-header">
-  <div class="header-content">
-    <div class="logo">
-      Let Cordeiro <span>Nails</span>
+    <div class="header-content">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="Logo Let Cordeiro Nails">
+        <span>Let Cordeiro Nails</span>
+      </div>
+
+
+      <div class="contacts">
+        <span>📞 929179922 / 216046974</span>
+      </div>
+
+      <nav class="menu">
+        <a href="#bemvindo">Bem Vindo</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#agendamento">Agendar</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="contacts">
-      <span>📞 929179922 / 216046974</span>
-    </div>
-
-    <nav class="menu">
-      <a href="#bemvindo">Bem Vindo</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#portfolio">Portfólio</a>
-      <a href="#agendamento">Agendar</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </div>
-</header>
-
-<!-- BEM VINDO -->
-<section id="bemvindo" class="section bemvindo-section">
-  <div class="bemvindo-content">
+  <!-- BEM VINDO -->
+  <section id="bemvindo" class="bemvindo-section section">
     <div class="bemvindo-texto">
       <h2>Bem-vindo à Let Cordeiro Nails</h2>
-      <p>
-        Descubra um espaço dedicado ao cuidado, beleza e criatividade. Na <strong>Let Cordeiro Nails</strong>, somos especialistas em 
-        alongamento em acrílico e nail art personalizada. Mais que serviços, oferecemos experiências únicas para valorizar o seu estilo. 
-        Agende seu horário e sinta-se ainda mais linda!
-      </p>
+      <p>Somos especializados em alongamento em acrílico, esmaltação em gel e nail design moderno. Cuidamos das suas
+        unhas com técnica, criatividade e carinho — garantindo sempre as últimas tendências para você.</p>
       <a href="#agendamento" class="botao-agendar">Agendar agora</a>
     </div>
+
     <div class="bemvindo-imagem">
-      <img src="assets/images/bemvindo.jpg" alt="Imagem de unhas decoradas">
+      <img src="assets/images/bemvindo.png" alt="Atendimento Let Cordeiro Nails">
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- SERVIÇOS -->
-  <section id="servicos" class="section">
+  <section id="servicos" class="section servicos-section">
     <h2>Serviços</h2>
-    <ul>
-      <li>💅 Manicure tradicional - R$20</li>
-      <li>👣 Pedicure tradicional - R$25</li>
-      <li>✨ Alongamento em acrílico - R$70</li>
-      <li>🎨 Nail Art personalizada - R$15 (adicional)</li>
-    </ul>
-  </section>
+    <p class="subtitulo-servicos">Escolha a opção ideal para realçar sua beleza!</p>
 
-  <!-- PORTFÓLIO -->
-  <section id="portfolio" class="section">
-    <h2>Portfólio</h2>
-    <div class="galeria">
-      <img src="assets/images/unha1.jpg" alt="Unha 1">
-      <img src="assets/images/unha2.jpg" alt="Unha 2">
-      <img src="assets/images/unha3.jpg" alt="Unha 3">
+    <div class="servicos-grid">
+      <div class="servico-card">
+        <div class="servico-imagem">
+          <img src="assets/images/acrilico.png" alt="Alongamento em acrílico">
+        </div>
+        <h3>Alongamento em Acrílico</h3>
+        <p>Alongamento com efeito natural, modelado de acordo com o seu estilo. Não necessita de UV.</p>
+        <span class="preco">R$ 100,00</span>
+      </div>
+
+      <div class="servico-card">
+        <div class="servico-imagem">
+          <img src="assets/images/gel.png" alt="Esmaltação em gel">
+        </div>
+        <h3>Esmaltação em Gel</h3>
+        <p>Esmaltação duradoura com acabamento impecável e brilho intenso.</p>
+        <span class="preco">R$ 50,00</span>
+      </div>
+
+      <div class="servico-card">
+        <div class="servico-imagem">
+          <img src="assets/images/manutencao.png" alt="Manutenção">
+        </div>
+        <h3>Manutenção</h3>
+        <p>Correção e renovação para alongamentos ou esmaltação, mantendo suas unhas impecáveis.</p>
+        <span class="preco">R$ 75,00</span>
+      </div>
+
+      <div class="servico-card">
+        <div class="servico-imagem">
+          <img src="assets/images/blindagem.png" alt="Blindagem em acrílico">
+        </div>
+        <h3>Blindagem em Acrílico</h3>
+        <p>Proteção da unha natural com camada acrílica, conferindo resistência e durabilidade.</p>
+        <span class="preco">R$ 75,00</span>
+      </div>
     </div>
   </section>
 
@@ -72,19 +95,50 @@
   <section id="agendamento" class="section">
     <h2>Agende seu horário</h2>
     <form id="form-agendamento">
-      <input type="text" placeholder="Seu nome" required>
-      <input type="date" required>
-      <input type="time" required>
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="date" id="data" required>
+
+      <select id="horario" required>
+        <option value="">Selecione um horário</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+      </select>
+
       <button type="submit">Agendar</button>
     </form>
   </section>
 
   <!-- CONTATO -->
-  <section id="contato" class="section">
+  <section id="contato" class="contato-section section">
     <h2>Contato</h2>
-    <p>📍 Fortaleza - CE</p>
-    <p>📱 <a href="https://wa.me/message/L2IDKPGIBEOQG1" target="_blank">Atendimento via WhatsApp</a></p>
-    <p>📸 <a href="https://www.instagram.com/letcordeironails/" target="_blank">@letcordeironails</a></p>
+    <div class="contato-container">
+      <div class="contato-info">
+        <h3>Informações</h3>
+
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Endereço:</strong><br> Rua Joaquim Frota, 1200 — Fortaleza, CE
+        </p>
+
+        <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong><br> <a href="https://wa.me/559299179922"
+            target="_blank">(92) 99179-922</a></p>
+
+        <p><i class="fab fa-instagram"></i> <strong>Instagram:</strong><br> <a
+            href="https://www.instagram.com/letcordeironails/" target="_blank">@letcordeironails</a></p>
+
+        <p><i class="fab fa-tiktok"></i> <strong>TikTok:</strong><br> <a href="https://www.tiktok.com/@letcordeironails"
+            target="_blank">@letcordeironails</a></p>
+      </div>
+
+      <div class="contato-mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15923.66137244349!2d-38.5247!3d-3.7367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c7489d2417cc7b9%3A0x0!2sRua%20Joaquim%20Frota%2C%201200%20-%20Fortaleza%20-%20CE!5e0!3m2!1spt-BR!2sbr!4v1719959400000!5m2!1spt-BR!2sbr"
+          width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -93,4 +147,5 @@
 
   <script src="scripts/main.js"></script>
 </body>
+
 </html>

@@ -3,8 +3,8 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
+  background-color: #ededed;
+  border-bottom: 1px solid #ddd;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
@@ -20,18 +20,28 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #222;
+  color: #26364d;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .logo span {
-  color: #ff00c8;
+  color: #26364d;
 }
 
 .contacts {
   font-size: 0.9rem;
-  color: #888;
+  color: #222;
   font-weight: 500;
 }
 
@@ -43,7 +53,7 @@
 
 .menu a {
   text-decoration: none;
-  color: #222;
+  color: #26364d;
   font-weight: 500;
   padding: 0.5rem 1rem;
   transition: 0.3s;
@@ -52,14 +62,23 @@
 
 .menu a:hover,
 .menu a.active {
-  background-color: #ff00c8;
-  color: #fff;
+  background-color: #e5ba73;
+  color: #26364d;
 }
 
 body {
   padding-top: 100px;
   margin: 0;
   font-family: 'Arial', sans-serif;
+  background-color: #26364d;
+  color: #ededed;
+}
+
+/* Regra global para todas as imagens do site */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Centralização e estrutura geral das seções */
@@ -71,71 +90,292 @@ body {
   box-sizing: border-box;
 }
 
-/* Seção Bem-vindo com imagem e texto lado a lado */
+/* Seção Bem-vindo */
 .bemvindo-section {
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #f9f9f9;
+  justify-content: center;
+  background-color: #26364d;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
 }
 
-.bemvindo-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
-  width: 100%;
+.bemvindo-texto,
+.bemvindo-imagem {
+  flex: 1 1 45%;
+  max-width: 50%;
+  box-sizing: border-box;
 }
 
 .bemvindo-texto {
-  flex: 1;
-  min-width: 300px;
+  padding: 20px;
 }
 
 .bemvindo-texto h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .bemvindo-texto p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: #ededed;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+
+.bemvindo-imagem img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .botao-agendar {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #d63384;
-  color: #fff;
+  background-color: #e5ba73;
+  color: #000000;
   text-decoration: none;
   border-radius: 30px;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .botao-agendar:hover {
-  background-color: #b02a6b;
+  background-color: #d0a45f;
 }
 
-.bemvindo-imagem {
-  flex: 1;
-  min-width: 300px;
-  text-align: right;
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .bemvindo-section {
+    flex-direction: column;
+  }
+
+  .bemvindo-texto,
+  .bemvindo-imagem {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .bemvindo-imagem img {
+    max-width: 300px;
+  }
 }
 
-.bemvindo-imagem img {
-  max-width: 100%;
-  height: auto;
+/* Seção Serviços */
+.servicos-section {
+  text-align: center;
+  background-color: #26364d;
+  padding: 60px 20px;
+}
+
+.servicos-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ededed;
+}
+
+.subtitulo-servicos {
+  font-size: 1.1rem;
+  color: #ededed;
+  margin-bottom: 40px;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.servico-card {
+  background: #ededed;
+  border: none;
   border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  max-width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
 }
 
-/* Footer centralizado */
+.servico-card:hover {
+  transform: translateY(-5px);
+}
+
+.servico-imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.servico-imagem img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Textos nos cards */
+.servico-card h3 {
+  font-size: 1.3rem;
+  color: #26364d;
+  margin-bottom: 15px;
+}
+
+.servico-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Preço dourado e negrito */
+.preco {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #26364d;
+  font-weight: 700;
+}
+
+/* Seção Agendamento */
+#form-agendamento {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#form-agendamento input,
+#form-agendamento select,
+#form-agendamento button {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+#form-agendamento button {
+  background-color: #e5ba73;
+  color: #26364d;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#form-agendamento button:hover {
+  background-color: #d0a45f;
+}
+
+/* contato-section */
+.contato-section {
+  background-color: #26364d;
+  padding: 60px 20px;
+  color: #ededed;
+  text-align: center;
+}
+
+.contato-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.subtitulo-contato {
+  font-size: 1.1rem;
+  color: #ededed;
+  margin-bottom: 40px;
+}
+
+.contato-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contato-info {
+  flex: 1 1 45%;
+  text-align: left;
+}
+
+.contato-info h3 {
+  font-size: 1.8rem;
+  color: #e5ba73;
+  margin-bottom: 20px;
+}
+
+.contato-info p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #ededed;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contato-info i {
+  color: #e5ba73;
+  font-size: 1.2rem;
+  min-width: 24px;
+}
+
+.contato-info a {
+  color: #e5ba73;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contato-info a:hover {
+  text-decoration: underline;
+}
+
+.contato-mapa {
+  flex: 1 1 50%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.contato-mapa iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contato-container {
+    flex-direction: column;
+  }
+
+  .contato-info, .contato-mapa {
+    flex: 1 1 100%;
+  }
+}
+
 footer {
   text-align: center;
   padding: 20px;
   width: 100%;
-  background-color: #333;
+  background-color: #4f6d89;
   color: #fff;
   margin-top: 60px;
 }
