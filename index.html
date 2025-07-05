@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Let Cordeiro Nails</title>
   <link rel="stylesheet" href="style/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
@@ -91,52 +93,87 @@
     </div>
   </section>
 
-  <!-- AGENDAMENTO -->
-  <section id="agendamento" class="section">
-    <h2>Agende seu horário</h2>
-    <form id="form-agendamento">
-      <input type="text" id="nome" placeholder="Seu nome" required>
-      <input type="date" id="data" required>
+  <!-- PORTFÓLIO -->
+  <section id="portfolio" class="section portfolio-section">
+    <h2>Portfólio</h2>
+    <p class="subtitulo-portfolio">Confira alguns dos nossos trabalhos recentes</p>
 
-      <select id="horario" required>
-        <option value="">Selecione um horário</option>
-        <option value="10:00">10:00</option>
-        <option value="11:00">11:00</option>
-        <option value="14:00">14:00</option>
-        <option value="15:00">15:00</option>
-        <option value="16:00">16:00</option>
-      </select>
-
-      <button type="submit">Agendar</button>
-    </form>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="assets/images/portfolio1.png" alt="Unhas decoradas 1">
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/images/portfolio2.png" alt="Unhas decoradas 2">
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/images/portfolio3.png" alt="Unhas decoradas 3">
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/images/portfolio4.png" alt="Unhas decoradas 4">
+      </div>
+    </div>
   </section>
+
+
+  <!-- AGENDAMENTO -->
+ <form id="form-agendamento">
+  <input type="text" id="nome" placeholder="Seu nome" required>
+  <input type="tel" id="telefone" placeholder="Seu WhatsApp" required>
+
+  <select id="servico" required>
+    <option value="">Selecione um serviço</option>
+    <option value="Alongamento em Acrílico">Alongamento em Acrílico</option>
+    <option value="Esmaltação em Gel">Esmaltação em Gel</option>
+    <option value="Manutenção">Manutenção</option>
+    <option value="Blindagem em Acrílico">Blindagem em Acrílico</option>
+  </select>
+
+  <input type="date" id="data" required>
+
+  <select id="horario" required>
+    <option value="">Selecione um horário</option>
+    <!-- Horários virão dinamicamente via JS -->
+  </select>
+
+  <button type="submit">Agendar</button>
+</form>
 
   <!-- CONTATO -->
   <section id="contato" class="contato-section section">
     <h2>Contato</h2>
-    <div class="contato-container">
-      <div class="contato-info">
-        <h3>Informações</h3>
+    <p class="subtitulo-contato">Fale conosco ou venha nos visitar</p>
 
-        <p><i class="fas fa-map-marker-alt"></i> <strong>Endereço:</strong><br> Rua Joaquim Frota, 1200 — Fortaleza, CE
-        </p>
-
-        <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong><br> <a href="https://wa.me/559299179922"
-            target="_blank">(92) 99179-922</a></p>
-
-        <p><i class="fab fa-instagram"></i> <strong>Instagram:</strong><br> <a
-            href="https://www.instagram.com/letcordeironails/" target="_blank">@letcordeironails</a></p>
-
-        <p><i class="fab fa-tiktok"></i> <strong>TikTok:</strong><br> <a href="https://www.tiktok.com/@letcordeironails"
-            target="_blank">@letcordeironails</a></p>
+    <div class="contato-container-simples">
+      <div class="contato-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <strong>Endereço:</strong><br>
+          Rua Joaquim Frota, 1200 — Fortaleza, CE
+        </div>
       </div>
 
-      <div class="contato-mapa">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15923.66137244349!2d-38.5247!3d-3.7367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c7489d2417cc7b9%3A0x0!2sRua%20Joaquim%20Frota%2C%201200%20-%20Fortaleza%20-%20CE!5e0!3m2!1spt-BR!2sbr!4v1719959400000!5m2!1spt-BR!2sbr"
-          width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      <div class="contato-item">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+          <strong>WhatsApp:</strong><br>
+          <a href="https://wa.me/559299179922" target="_blank">(92) 99179-922</a>
+        </div>
+      </div>
+
+      <div class="contato-item">
+        <i class="fab fa-instagram"></i>
+        <div>
+          <strong>Instagram:</strong><br>
+          <a href="https://www.instagram.com/letcordeironails/" target="_blank">@letcordeironails</a>
+        </div>
+      </div>
+
+      <div class="contato-item">
+        <i class="fab fa-tiktok"></i>
+        <div>
+          <strong>TikTok:</strong><br>
+          <a href="https://www.tiktok.com/@letcordeironails" target="_blank">@letcordeironails</a>
+        </div>
       </div>
     </div>
   </section>

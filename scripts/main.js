@@ -1,26 +1,27 @@
-document.getElementById("form-agendamento").addEventListener("submit", function(event) {
-  event.preventDefault();
+// Simulação de horários disponíveis para teste (ideal vir do back-end)
+const horariosDisponiveis = {
+  "2025-07-03": ["10:00", "11:00", "14:00", "16:00"],
+  "2025-07-04": ["09:00", "13:00", "15:00"]
+};
 
-  const nome = document.getElementById("nome").value;
-  const data = document.getElementById("data").value;
-  const horario = document.getElementById("horario").value;
+document.getElementById("data").addEventListener("change", function() {
+  const dataSelecionada = this.value;
+  const horarioSelect = document.getElementById("horario");
 
-  if (!nome || !data || !horario) {
-    alert("Por favor, preencha todos os campos.");
-    return;
+  // Limpa os horários
+  horarioSelect.innerHTML = '<option value="">Selecione um horário</option>';
+
+  if (horariosDisponiveis[dataSelecionada]) {
+    horariosDisponiveis[dataSelecionada].forEach(horario => {
+      const option = document.createElement("option");
+      option.value = horario;
+      option.textContent = horario;
+      horarioSelect.appendChild(option);
+    });
+  } else {
+    const option = document.createElement("option");
+    option.value = "";
+    option.textContent = "Sem horários disponíveis";
+    horarioSelect.appendChild(option);
   }
-
-  // Simulando horários disponíveis
-  const horariosDisponiveis = ["10:00", "11:00", "14:00", "15:00", "16:00"];
-
-  if (!horariosDisponiveis.includes(horario)) {
-    alert("Este horário não está mais disponível.");
-    return;
-  }
-
-  // Aqui você pode depois integrar com API Google ou backend
-  alert(`Agendamento confirmado para ${nome} no dia ${data} às ${horario}. Entraremos em contato via WhatsApp.`);
-
-  // Resetar formulário
-  this.reset();
 });
