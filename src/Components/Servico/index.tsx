@@ -1,17 +1,18 @@
 // src/components/Servicos.tsx
 import React from "react";
-import { ServicoCard } from "./ServicoCard";
-import acrilico from "../assets/images/acrilico.png";
-import gel from "../assets/images/gel.png";
-import manutencao from "../assets/images/manutencao.png";
-import blindagem from "../assets/images/blindagem.png";
+import { ServicoCard } from "../ServicoCard";
+import acrilico from "../../assets/images/acrilico.png";
+import gel from "../../assets/images/gel.png";
+import manutencao from "../../assets/images/manutencao.png";
+import blindagem from "../../assets/images/blindagem.png";
+import { ServicesContainer, Title, CardsContainer, Subtitle } from "./styles";
 
 export const Servicos: React.FC = () => (
-  <section id="servicos" className="section servicos-section">
-    <h2>Serviços</h2>
-    <p className="subtitulo-servicos">Escolha a opção ideal para realçar sua beleza!</p>
+  <ServicesContainer id="servicos">
+    <Title>Serviços</Title>
+    <Subtitle className="subtitulo-servicos">Escolha a opção ideal para realçar sua beleza!</Subtitle>
 
-    <div className="servicos-grid">
+    <CardsContainer >
       <ServicoCard
         imagem={acrilico}
         alt="Alongamento em acrílico"
@@ -40,6 +41,6 @@ export const Servicos: React.FC = () => (
         descricao="Proteção da unha natural com camada acrílica, conferindo resistência e durabilidade."
         preco="R$ 75,00"
       />
-    </div>
-  </section>
+    </CardsContainer>
+  </ServicesContainer>
 );

@@ -1,5 +1,5 @@
-// src/components/Agendamento.tsx
 import React, { useState, useEffect } from "react";
+import { Form, Input, Select, Button } from "./styles";
 
 export const Agendamento: React.FC = () => {
   const horariosDisponiveis: Record<string, string[]> = {
@@ -19,24 +19,24 @@ export const Agendamento: React.FC = () => {
   }, [data]);
 
   return (
-    <form id="form-agendamento" className="section" style={{ textAlign: "center" }}>
-      <input type="text" placeholder="Seu nome" required />
-      <input type="tel" placeholder="Seu WhatsApp" required />
-      <select required>
+    <Form id="form-agendamento">
+      <Input type="text" placeholder="Seu nome" required />
+      <Input type="tel" placeholder="Seu WhatsApp" required />
+      <Select required>
         <option value="">Selecione um serviço</option>
         <option value="Alongamento em Acrílico">Alongamento em Acrílico</option>
         <option value="Esmaltação em Gel">Esmaltação em Gel</option>
         <option value="Manutenção">Manutenção</option>
         <option value="Blindagem em Acrílico">Blindagem em Acrílico</option>
-      </select>
-      <input type="date" value={data} onChange={(e) => setData(e.target.value)} required />
-      <select required>
+      </Select>
+      <Input type="date" value={data} onChange={(e) => setData(e.target.value)} required />
+      <Select required>
         <option value="">Selecione um horário</option>
         {horarios.length > 0
           ? horarios.map((h) => <option key={h} value={h}>{h}</option>)
           : <option value="">Sem horários disponíveis</option>}
-      </select>
-      <button type="submit">Agendar</button>
-    </form>
+      </Select>
+      <Button type="submit">Agendar</Button>
+    </Form>
   );
 };

@@ -1,25 +1,15 @@
 // src/App.tsx
 import React from "react";
-import "./styles/main.css";
-import { Header } from "./components/Header";
-import { BemVindo } from "./components/BemVindo";
-import { Servicos } from "./components/Servicos";
-import { Portfolio } from "./components/Portfolio";
-import { Agendamento } from "./components/Agendamento";
-import { Contato } from "./components/Contato";
+import { Header } from "./Components/Header";
+import { BemVindo } from "./Components/BemVindo";
+import { Servicos } from "./Components/Servico";
+import { Portfolio } from "./Components/Portifolio";
+import { Agendamento } from "./Components/Agendamentos";
+import { Contato } from "./Components/Contato";
+import Layout from "./Layout";
 
 const App: React.FC = () => (
-  <>
-    <Header />
-    <BemVindo />
-    <Servicos />
-    <Portfolio />
-    <Agendamento />
-    <Contato />
-    <footer>
-      <p>&copy; 2025 Let Cordeiro Nails. Todos os direitos reservados.</p>
-    </footer>
-  </>
+  <Layout/>
 );
 
 export default App;
